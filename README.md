@@ -17,7 +17,11 @@ To follow along with the examples, you need to install below packages into your 
 
 #### Anaconda Installation
 
-After downloading the Anaconda, follow [Anaconda Install](https://docs.anaconda.com/anaconda/install/) instruction based on your system configuration.
+After downloading the Anaconda, follow [Anaconda Install](https://docs.anaconda.com/anaconda/install/) instruction based on your system configuration. 
+
+**Important: While installing the anaconda, make sure below below boxes checked.**
+
+![Anaconda](https://user-images.githubusercontent.com/33441778/161914017-3b8b8a4b-79be-4cfc-aa12-bb36811cc2b1.png)
 
 
 #### Sphinx Installation
