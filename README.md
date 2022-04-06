@@ -9,7 +9,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To follow along with the examples, you need to install below packages into your system.
+To follow along with the examples, you need to install below packages into your system. 
+
+*Note: If have installed updated versions of below packages, please ignore the following steps*
+
 * [Anaconda](https://www.anaconda.com/)
 * [Docker](https://www.docker.com/products/docker-desktop)
 
