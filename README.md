@@ -29,8 +29,10 @@ After downloading the Anaconda, follow [Anaconda Install](https://docs.anaconda.
 Open command prompt as administrator and use below command to install sphinx in your machine.
 
 ```
- pip install -U sphinx
+pip install -U sphinx
 ```
+
+*Note: If you are not able to execute above command through command prompt, open anaconda prompt as administrator to execute the commands.*
 
 `sphinx-build --version` Use this command to check sphinx version.
 
