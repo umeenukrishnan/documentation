@@ -14,54 +14,12 @@ To follow along with the examples, you need to install below packages into your 
 *Note: If have installed updated versions of below packages, please ignore the following steps*
 
 * [Anaconda](https://www.anaconda.com/)
-* [Docker](https://www.docker.com/products/docker-desktop)
 
 #### Anaconda Installation
 
 After downloading the Anaconda, follow [Anaconda Install](https://docs.anaconda.com/anaconda/install/) instruction based on your system configuration.
 
-#### Docker Installing and Running
 
-Once the docker system in installed and running open terminal and run:
-
-```
-cd /path/to/this/repo
-cd Docker
-docker build --target base -t topology .
-```
-```
-cd /path/to/this/repo
-cd Docker
-docker build --target notebook -t topology_notebook .
-```
-
-After building the docker image you can start a Ipython notebook, just run:
-To run in command prompt:
-
-```
-docker run -v host_system_path:/root/ -w /root/ -it topology
-```
-To run Notebook:
-```
-docker run -v host_system_path:/root/ -w /root/ -it topology_notebook
-
-docker run -p 8888:8888 -v ~/Codes/:/root/ -w /root/ topology_notebook
-```
-To start server:
-```
-docker start topology
-```
-To stop the server:
-
-```
-docker stop topology
-```
-
-If you want to see the log output from the Jupyter notebook server type:
-
-```
-docker logs topology
-```
 #### Sphinx Installation
 
 Open command prompt as administrator and use below command to install sphinx in your machine.
@@ -70,26 +28,17 @@ Open command prompt as administrator and use below command to install sphinx in 
  pip install -U sphinx
 ```
 
- `sphinx-build --version` Use this command to check sphinx version.
+`sphinx-build --version` Use this command to check sphinx version.
 
-Sphinx offers flexibility in changing the webpage format.  *read_docs*  is the most popular theme. In order to install it use this command  `pip install sphinx_rtd_theme`.
+Sphinx offers flexibility in changing the webpage format.  *read_docs*  is the most popular theme. In order to install it use this command  
+
+```pip install sphinx_rtd_theme```
 
 So far, we installed all the required modules that necessary to develop documentation. Please refer to _doc/README.md for documentation process using Sphinx.
 
 ## Notes
 
-To run without logging add the following to your python file
-```
-import logging
-set_log_active(False)
-```
-To merge all the extracted images from paraview into a video install [ffmpeg] (https://www.ffmpeg.org/)
-```
-ffmpeg -framerate 50 -i img.%04d.png -c:v libx264 -b:v 2M -maxrate 2M -bufsize 1M -crf 0  -c:a aac -pix_fmt yuv420p video.mp4
-```
-```
-ffmpeg -framerate 50 -i mode_two.%04d.png -c:v libx264 -b:v 2M -maxrate 2M -bufsize 1M -crf 0 video.mp4
-```
+
 
 ## Folder Structure
 
