@@ -2,9 +2,11 @@
 
 This directory will contain the documentation for the package. This will be automatically generated from python files through Sphinx documentation tool.
 
+**Note:** Please read this document in GitHub or markdown editor like Typora.
+
 ## What is Sphinx?
 
-Well, As mentioned earlier, It is a python package documentation tool. It reads the docstrings in python code and converts  them in to easily readable html format. Sphinx is also capable of converting the documentation into LaTeX format(PDF). The underlaying file format in this documentation is reStructuredText (RST) format, which is a markup language. It is necessary to write proper sphinx-readable docstrings to generate better documentation. See the files in  `_rsc` directory for standard docstring format.
+Well, As mentioned earlier, It is a python project documentation tool. It reads the docstrings in python code and converts  them in to easily readable html format. Sphinx is also capable of converting the documentation into LaTeX format(PDF). The underlaying file format in this documentation is reStructuredText (RST) format, which is a markup language. It is necessary to write proper sphinx-readable docstrings to generate better documentation. See the files in  `_rsc` directory for standard docstring format.
 
 #### reStructuredText:
 
@@ -103,19 +105,28 @@ So far, we installed all the required modules that necessary to develop document
   
   ```
 
-* Please don't mind this syntax. You get complete idea after seeing the final web documentation. 
+* Please don't mind this syntax. You get complete idea of it, after generating the final web documentation.
 
-* Finally, we are onto last step of this process.
+### Generating HTML files in local directory
 
+* This process generates the html files in *_build/html* directory. These HTML files are capable of generating website locally.
 * In command prompt use command, `make html` . This creates multiple html files in *_build/html* directory if the docstrings and `.rst` file are in correct format. Otherwise, it returns error in command prompt.
-
 * After executing all the commands correctly, Open *index.html* in *_build/html* directory to see the project documentation.
+* These files are not necessary to make online available website. Sphinx's has an other way to generate online website of the project so It is  better to add *_build* directory to *gitignore* list. 
+
+### Publishing the website:
+
+* After making all the necessary modifications to the *.rst* files. We can commit and push all the generated files to GitHub. To publish the projects *.rst* as website, please create an account in [Read the docs web](https://readthedocs.org/), if you haven't have one already. 
+* Log-in to the website and direct to [rtd_projects](https://readthedocs.org/dashboard/) then `Import a project` > `Import manually`. 
+* Provide the information like Name, Repository URL, Repository type, and default branch.
+  * Please note that the project name should be unique.
+* You can check or uncheck the advanced options box. If have checked it, press `next` and provide necessary information and press `finish`. if haven't checked the advanced options box, pressing `next` directs to final page. In this page, press `Build version` to build the project website. It takes a moment to complete and generate website link as *view doc* in the same page.
+* There you go!! By pressing *view doc* we can see the beautiful web page of the project.
+* Any changes that are being made to *.rst* and docstring in *.py* files will reflect in website only after rebuilding in [rtd_projects](https://readthedocs.org/dashboard/).
 
 ## Final notes:
 
-The above mentioned procedure is best suitable for the file structure of this project. To develop the documentation of different type of file structure, few modifications need to be added based the respective file structure. 
-
-**Note:** Please read this documentation in GitHub or markdown editor like Typora.
+The above mentioned procedure is best suitable for the file structure of this project. To develop the documentation of different type of file structure, few modifications need to be added to *conf.py* and *index.rst*  based on the respective file structure. 
 
 #### Existing file description:
 
