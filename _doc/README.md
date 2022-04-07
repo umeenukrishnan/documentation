@@ -128,6 +128,8 @@ So far, we installed all the required modules that necessary to develop document
 
 The above mentioned procedure is best suitable for the file structure of this project. To develop the documentation of different type of file structure, few modifications need to be added to *conf.py* and *index.rst*  based on the respective file structure. 
 
+To learn reStructuredText formatting, read the .rst files in projects like NURBS-Pytohn, 
+
 #### Existing file description:
 
 * `1_introduction.rst` :  contains the information of the project
